@@ -1,0 +1,59 @@
+{
+  "name": "@tomjs/commitlint-config",
+  "type": "module",
+  "version": "1.1.0",
+  "packageManager": "pnpm@10.28.2",
+  "description": "stylelint config",
+  "author": {
+    "name": "Tom Gao",
+    "email": "tom@tomgao.cn"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomjs/commitlint-config.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "commitlint",
+    "commitlint-config",
+    "lint",
+    "config"
+  ],
+  "exports": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "lint": "eslint --fix",
+    "prepare": "simple-git-hooks",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": "^21.2.2"
+  },
+  "dependencies": {
+    "@commitlint/config-conventional": "^21.2.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.3.0",
+    "@commitlint/types": "^21.2.0",
+    "@tomjs/commitlint-config": "workspace:*",
+    "@tomjs/eslint-config": "^1.1.0",
+    "@tomjs/tsconfig": "^3.2.1",
+    "@types/node": "^22.20.1",
+    "eslint": "^10.8.1",
+    "lint-staged": "^17.3.0",
+    "publint": "^0.3.23",
+    "simple-git-hooks": "^2.13.1",
+    "tsdown": "^0.22.14",
+    "typescript": "~5.9.3"
+  }
+}
